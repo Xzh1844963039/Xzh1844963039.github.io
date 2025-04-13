@@ -2,14 +2,62 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <title>肖泽昊的个人网站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人网站</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .report {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ddd;
+            margin-top: 30px;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <h1>欢迎来到我的个人网站</h1>
-    <p>这是我的第一个 GitHub Pages 网站。</p>
-    <p>这里会展示我的数据分析报告。</p>
+    <h1>你好，我是肖泽昊</h1>
+    <p>这是我的个人网站，展示我在数据分析和编程方面的一些学习成果。</p>
 
-    <p><a href="assets/telco-report.pdf" target="_blank">📄 点击查看 Telco 客户流失分析报告（PDF）</a></p>
+    <h2>📊 数据分析报告展示</h2>
+    <div class="report">
+        <h3>Telco 客户流失分析报告</h3>
+        <p>这是我使用 IBM 提供的 Telco Customer Churn 数据集，进行生存分析（如 Kaplan-Meier、Cox 模型、AFT 模型）后完成的分析报告。</p>
+        <a class="btn" href="/assets/telco-report.pdf" target="_blank">📄 点击查看完整报告（PDF）</a>
+    </div>
+
+    <h2 style="margin-top:50px;">📝 博客 / 项目日志</h2>
+    <ul>
+        <li><strong>2025-04-13：</strong> 搭建了个人网站，并发布了我的第一篇数据分析报告。</li>
+        <!-- 可以继续加 -->
+    </ul>
 </body>
 </html>
