@@ -2,62 +2,136 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>肖泽昊的个人网站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网站</title>
     <style>
+        /* 设置全局字体和背景色 */
         body {
-            font-family: "Helvetica Neue", sans-serif;
-            max-width: 800px;
-            margin: auto;
-            padding: 40px;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
-        h1 {
-            color: #2c3e50;
-        }
-        .report {
+
+        /* 页面容器，居中对齐 */
+        .container {
+            width: 80%;
+            margin: 0 auto;
             background-color: #fff;
             padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            box-shadow: 0 0 10px #ddd;
+            margin-top: 50px;
+        }
+
+        /* 页眉样式 */
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        /* 小标题样式 */
+        h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* 段落样式 */
+        p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* 链接样式 */
+        a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+
+        /* 添加一些按钮样式 */
+        .button-container {
+            text-align: center;
             margin-top: 30px;
         }
-        a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+
         .btn {
-            display: inline-block;
-            padding: 10px 15px;
-            margin-top: 10px;
-            background-color: #3498db;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #007BFF;
             color: white;
+            border: none;
             border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
+
         .btn:hover {
-            background-color: #2980b9;
+            background-color: #0056b3;
+        }
+
+        /* 边框和间距 */
+        .content {
+            margin-bottom: 30px;
+        }
+
+        /* 右下角显示的固定按钮样式 */
+        .fixed-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: #FF5722;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        .fixed-btn:hover {
+            background-color: #e64a19;
         }
     </style>
 </head>
 <body>
-    <h1>你好，我是肖泽昊</h1>
-    <p>这是我的个人网站，展示我在数据分析和编程方面的一些学习成果。</p>
+    <div class="container">
+        <h1>欢迎来到我的个人网站</h1>
+        <p>这是我的第一个 GitHub Pages 网站。</p>
+        <p>这里会展示我的数据分析报告。</p>
 
-    <h2>📊 数据分析报告展示</h2>
-    <div class="report">
-        <h3>Telco 客户流失分析报告</h3>
-        <p>这是我使用 IBM 提供的 Telco Customer Churn 数据集，进行生存分析（如 Kaplan-Meier、Cox 模型、AFT 模型）后完成的分析报告。</p>
-        <a class="btn" href="/assets/telco-report.pdf" target="_blank">📄 点击查看完整报告（PDF）</a>
+        <!-- 博客部分 -->
+        <div class="content">
+            <h2>📈 博客：Telco 客户流失分析</h2>
+            <p>
+                本项目使用 IBM Telco Customer Churn 数据集，旨在预测用户流失概率以及评估不同条件下客户带来的收益周期。
+                我主要使用了生存分析方法（Kaplan-Meier、Cox 回归、加速失效时间模型）来建模，并通过构建“现金流回收表”帮助理解客户价值。
+            </p>
+            <p>
+                在分析中，我还使用了小组件（Widgets）实现用户输入模拟，动态生成现金流图表。报告中包含多个图示，比如客户生存概率曲线、不同月份的累计净现值柱状图等。
+            </p>
+            <p>
+                👉 想了解更多内容，请点击查看完整报告：
+                <a href="/assets/telco-report.pdf" target="_blank">📄 Telco 客户流失分析报告</a>
+            </p>
+        </div>
+
+        <!-- 可选的额外信息：如果你希望加入网站导航栏等 -->
+        <p>欢迎访问更多内容！</p>
     </div>
 
-    <h2 style="margin-top:50px;">📝 博客 / 项目日志</h2>
-    <ul>
-        <li><strong>2025-04-13：</strong> 搭建了个人网站，并发布了我的第一篇数据分析报告。</li>
-        <!-- 可以继续加 -->
-    </ul>
+    <!-- 右下角固定按钮 -->
+    <a href="#top" class="fixed-btn">↑</a>
 </body>
 </html>
